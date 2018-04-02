@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="short icon" href="" type="jpg/img">
+    <title>C'V</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
+</head>
+
+<body>
+    <div id="info">
+
+    </div>
+
+</body>
+<script>
+    function Info(name, fname, nic, cell, religion, nationatity, marital, address, email) {
+        this.name = name;
+        this.fname = fname;
+        this.nic = nic;
+        this.cell = cell;
+        this.religion = religion;
+        this.nationatity = nationatity;
+        this.marital = marital;
+        this.address = address;
+        this.email = email;
+    };
+
+    var a = new Info(
+        "Muhammad Sarim", "Shoaib Rana", "42101-0820801-9", "03172142662",
+        "Islam", "Pakistani", "Single",
+        "H /NO. 20/4 GULBAHAR NO 1  KARACHI, PAKISTAN.",
+        "muhammadsarim555@gmail.com",""
+    );
+    // for name
+    var id = document.getElementById("info"); //create //
+    var createH1 = document.createElement("h1");
+    createH1.setAttribute('id','nme');
+    createH1.innerHTML = a.name;
+    id.appendChild(createH1);
+    // till here
+
+    //create pic
+    var pic = document.createElement('img');
+    var addres = pic.setAttribute('src','pic.jpg');
+    pic.innerHTML = addres;
+    id.appendChild(pic) ;
+
+    // for cell no
+    var createH3 = document.createElement("h3");
+    createH3.innerHTML = "Contact No :" + a.cell;
+    id.appendChild(createH3);
+    // till here
+
+    // address
+    var createH3_for_address = document.createElement("h3");
+    createH3_for_address.innerHTML = a.address;
+    id.appendChild(createH3_for_address);
+    // till here
+
+    var a = document.createElement("a");
+    a.setAttribute('href', 'https://mail.google.com');
+    var e = id.appendChild(a).innerHTML = "muhammadsarim555@gmail.com";
+    
+
+    // personal detail   (this is for monday) 
+    // var forDetail = document.createElement("ul");
+    // forDetail.createElement("li");
+    // forDetail.innerHTML = a.fname;
+    // id.appendChild(forDetail);
+
+
+    // to obtain heading//
+    var h = document.createElement("h2");
+    h.innerHTML = "Career Objectives: " + "<br>";
+    id.appendChild(h);
+    var p = document.createElement("P");
+    p.innerHTML = "To obtain and get this job utilize skills and new ideas .";
+    id.appendChild(p);
+
+    //create persoal inforamation//
+    var createInfo = document.createElement("h2");
+    createInfo.innerHTML = "Personal Details: ";
+    id.appendChild(createInfo);
+
+    //education //
+    var createEducation = document.createElement("h2");
+    createEducation.innerHTML = "Education :";
+    id.appendChild(createEducation);
+    var matric = document.createElement("p");
+    matric.innerHTML = " Matriculation From Sindh Board ( Science )";
+    var dae = document.createElement("p");
+    dae.innerHTML =  " D.A.E In Information Technology (Progressing)";
+    id.appendChild(matric);
+    id.appendChild(dae);
+    // var web = document.createElement("b").innerHTML = "<br> " + "Web Developing And Mobile Applicar"
+
+    //skills 
+    var skill = document.createElement("h2");
+    skill.innerHTML = "Skills :";
+    id.appendChild(skill);
+    var ms = document.createElement("p");
+    ms.innerHTML = "<b>" + "MS-OFFICE: " + "</b>" + "Word, Excel, PowerPoint.";
+    id.appendChild(ms);
+    var o = document.createElement("p");
+    o.innerHTML = "<b>" + "WEB APPLICATIONS:" + "</b> " + "Good Net Browsing, Mail Attachments & Downloading…" ;
+    id.appendChild(o);
+
+</script>
+
+</html>
